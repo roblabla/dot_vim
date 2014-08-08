@@ -5,13 +5,27 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim 
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
+
+" Utilities
 Plugin 'scrooloose/nerdtree'
-Plugin 'roblabla/42vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'mbbill/undotree'
+Plugin 'mattdbridges/bufkill.vim'
+Plugin 'terryma/vim-multiple-cursors' " TODO : Needs configuration
+
+" Visual
 Plugin 'bling/vim-airline'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'bufkill'
+Plugin 'tomasr/molokai'
+
+" 42
+Plugin 'roblabla/42vim'
+
+" Misc
+Plugin 'scrooloose/syntastic' " Todo : Needs configuration
+Plugin 'Shougo/neocomplete.vim'
+
+" Language plugins
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'digitaltoad/vim-jade'
 call vundle#end()
 
 " Re-enable filetype

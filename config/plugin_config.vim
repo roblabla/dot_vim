@@ -32,3 +32,6 @@ endfunction
 " UndoTree
 " Open to the right
 let g:undotree_WindowLayout = 3
+
+" Syntastic
+let g:syntastic_coffee_checkers = ['coffee', 'coffeelint']

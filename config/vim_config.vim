@@ -4,6 +4,7 @@ set nocompatible
 " Enable syntax highlighting
 filetype plugin indent on
 syntax on
+colorscheme molokai
 
 " Some presentational settings
 set number			" Numbers list
@@ -13,12 +14,15 @@ set ruler			" Show current char in bottom right
 set visualbell		" Don't friggin beep
 set wildmenu		" Better command completion
 set laststatus=2	" Always display status line
+set cc=80			" Show 80 character bar
 " Show invisible characters
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set list
 
 " Behavior
 set wildmode=longest,list		" Bash-style command completion
+set wildignorecase				" Ignore case sensitivity for commands
+set ignorecase					" Same as above
 set clipboard=unnamed			" * register is OS clipboard
 set autowriteall				" Auto-save before :next, :make, etc...
 set hidden						" TODO : Figure out wtf this does
@@ -38,3 +42,7 @@ set foldlevelstart=20
 
 " Encoding
 set encoding=utf8
+
+" Language config
+autocmd FileType coffee set expandtab shiftwidth=2 softtabstop=2
+autocmd FileType jade set expandtab shiftwidth=2 softtabstop=2
