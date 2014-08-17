@@ -35,3 +35,6 @@ let g:undotree_WindowLayout = 3
 
 " Syntastic
 let g:syntastic_coffee_checkers = ['coffee', 'coffeelint']
+
+" JavaScript-syntax
+autocmd FileType javascript call JavaScriptFold()

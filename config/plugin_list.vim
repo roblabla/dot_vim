@@ -25,7 +25,9 @@ Plugin 'Shougo/neocomplete.vim'
 
 " Language plugins
 Plugin 'kchmck/vim-coffee-script'
+" Plugin 'jelera/vim-javascript-syntax'
 Plugin 'digitaltoad/vim-jade'
+Plugin 'mustache/vim-mustache-handlebars'
 call vundle#end()
 
 " Re-enable filetype
