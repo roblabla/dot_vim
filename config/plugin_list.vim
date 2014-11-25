@@ -28,6 +28,7 @@ Plugin 'kchmck/vim-coffee-script'
 " Plugin 'jelera/vim-javascript-syntax'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'wting/rust.vim'
 call vundle#end()
 
 " Re-enable filetype
