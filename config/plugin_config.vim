@@ -22,8 +22,8 @@ endfunction
 " Close vim if only minibufexpl and nerdtree are open
 autocmd WinEnter * call s:closeIfOnlyNerdTreeLeft()
 function! s:closeIfOnlyNerdTreeLeft()
-	if winnr("$") == 1
-		if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName != -1))
+	if (winnr("$") == 1)
+		if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
 			q
 		endif
 	end
