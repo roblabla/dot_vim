@@ -4,6 +4,10 @@ let g:airline_theme='zenburn'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
+" Colorscheme
+set background=dark
+colorscheme solarized
+
 " NERDTree, my favorite file manager
 autocmd VimEnter * call s:actionForOpen()
 function! s:actionForOpen()

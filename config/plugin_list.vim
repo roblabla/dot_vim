@@ -14,7 +14,7 @@ Plugin 'terryma/vim-multiple-cursors' " TODO : Needs configuration
 
 " Visual
 Plugin 'bling/vim-airline'
-Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
 
 " 42
 Plugin 'roblabla/42vim'

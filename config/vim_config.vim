@@ -4,7 +4,6 @@ set nocompatible
 " Enable syntax highlighting
 filetype plugin indent on
 syntax on
-colorscheme molokai
 
 " Some presentational settings
 set number			" Numbers list
