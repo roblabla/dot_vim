@@ -8,9 +8,12 @@ Plugin 'gmarik/Vundle.vim'
 
 " Utilities
 Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 Plugin 'mbbill/undotree'
 Plugin 'mattdbridges/bufkill.vim'
 Plugin 'terryma/vim-multiple-cursors' " TODO : Needs configuration
+" Todo, check if EditorConfig core is installed
+Plugin 'editorconfig/editorconfig-vim'
 
 " Visual
 Plugin 'bling/vim-airline'
