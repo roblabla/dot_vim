@@ -6,7 +6,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Colorscheme
 set background=dark
-colorscheme solarized
+colorscheme base16-monokai
 
 " NERDTree, my favorite file manager
 autocmd VimEnter * call s:actionForOpen()
@@ -39,6 +39,3 @@ let g:undotree_WindowLayout = 3
 
 " Syntastic
 let g:syntastic_coffee_checkers = ['coffee', 'coffeelint']
-
-" JavaScript-syntax
-autocmd FileType javascript call JavaScriptFold()

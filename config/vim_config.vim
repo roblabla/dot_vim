@@ -31,8 +31,8 @@ set autoindent					" Enable auto-indenting
 set noswapfile					" No swap file, use version control instead
 " set paste						" Fix bad auto-indent of pasted text.
 set ts=4						" 4 spaces per tab
-set noexpandtab					" Don't expand tab by default (stupid 42)
-set smartindent					" Smart indentation
+" set noexpandtab					" Don't expand tab by default (stupid 42)
+set autoindent					" Smart indentation
 
 " Folding
 set foldmethod=syntax
@@ -43,7 +43,10 @@ set foldlevelstart=20
 set encoding=utf8
 
 " Language config
+autocmd FileType c set noexpandtab shiftwidth=4 softtabstop=4
 autocmd FileType coffee set expandtab shiftwidth=2 softtabstop=2
+autocmd FileType html set expandtab shiftwidth=2 softtabstop=2
 autocmd FileType javascript set expandtab shiftwidth=2 softtabstop=2
 autocmd FileType jade set expandtab shiftwidth=2 softtabstop=2
 autocmd FileType json set expandtab shiftwidth=2 softtabstop=2
+let asmsyntax="nasm"

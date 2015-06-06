@@ -14,7 +14,7 @@ Plugin 'terryma/vim-multiple-cursors' " TODO : Needs configuration
 
 " Visual
 Plugin 'bling/vim-airline'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'chriskempson/base16-vim'
 
 " 42
 Plugin 'roblabla/42vim'
@@ -22,6 +22,7 @@ Plugin 'roblabla/42vim'
 " Misc
 Plugin 'scrooloose/syntastic' " Todo : Needs configuration
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'myusuf3/numbers.vim'
 
 " Language plugins
 Plugin 'kchmck/vim-coffee-script'
@@ -29,6 +30,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'wting/rust.vim'
+Plugin 'othree/yajs.vim'
 call vundle#end()
 
 " Re-enable filetype
