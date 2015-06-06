@@ -50,3 +50,6 @@ autocmd FileType javascript set expandtab shiftwidth=2 softtabstop=2
 autocmd FileType jade set expandtab shiftwidth=2 softtabstop=2
 autocmd FileType json set expandtab shiftwidth=2 softtabstop=2
 let asmsyntax="nasm"
+
+" Space Leader !
+let mapleader = "\<Space>"
