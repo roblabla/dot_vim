@@ -34,6 +34,7 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'wting/rust.vim'
 Plugin 'othree/yajs.vim'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 call vundle#end()
 
 " Re-enable filetype

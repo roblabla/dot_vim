@@ -1,13 +1,12 @@
-" Airline, the status line of awesome
-set guifont=Powerline_Consolas:h14:cANSI
-let g:airline_theme='zenburn'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-
 " Colorscheme
 set background=dark
 colorscheme base16-monokai
 
+" Airline, the status line of awesome
+" set guifont=Powerline_Consolas:h14:cANSI
+let g:airline_theme='base16'
+" let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 if exists(":NERDTree")
 "	autocmd VimEnter * call s:actionForOpen()
