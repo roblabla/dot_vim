@@ -7,6 +7,7 @@ colorscheme base16-monokai
 let g:airline_theme='base16'
 " let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 if exists(":NERDTree")
 "	autocmd VimEnter * call s:actionForOpen()
@@ -39,3 +40,9 @@ let g:undotree_WindowLayout = 3
 
 " Syntastic
 let g:syntastic_coffee_checkers = ['coffee', 'coffeelint']
+
+" Rainbow Parentheses auto-enable
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces

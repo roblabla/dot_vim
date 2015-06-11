@@ -14,6 +14,8 @@ Plugin 'mattdbridges/bufkill.vim'
 Plugin 'terryma/vim-multiple-cursors' " TODO : Needs configuration
 " Todo, check if EditorConfig core is installed
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'kien/rainbow_parentheses.vim'
 
 " Visual
 Plugin 'bling/vim-airline'
