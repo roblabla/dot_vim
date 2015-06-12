@@ -30,7 +30,9 @@ set mouse=a						" Enable OS mouse clicking
 set autoindent					" Enable auto-indenting
 set noswapfile					" No swap file, use version control instead
 " set paste						" Fix bad auto-indent of pasted text.
+set sts=4						" 4 column per tab key press
 set ts=4						" 4 spaces per tab
+set sw=4						" Reindent operation fix
 " set noexpandtab					" Don't expand tab by default (stupid 42)
 set autoindent					" Smart indentation
 
