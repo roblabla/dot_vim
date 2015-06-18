@@ -39,6 +39,10 @@ endif
 let g:undotree_WindowLayout = 3
 
 " Syntastic
+let g:syntastic_c_compiler = 'clang'
+let g:syntastic_c_compiler_options = '-Wall -Wextra -Werror'
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = '-Wall -Wextra -Werror'
 let g:syntastic_coffee_checkers = ['coffee', 'coffeelint']
 
 " Rainbow Parentheses auto-enable
