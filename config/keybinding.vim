@@ -11,6 +11,7 @@ function! s:ToggleCopyPasteMode()
 		if exists(":NumbersDisable")
 			:NumbersDisable
 		endif
+		set mouse=
 	else
 		set list
 		set nopaste
@@ -20,6 +21,7 @@ function! s:ToggleCopyPasteMode()
 		if exists(":NumbersEnable")
 			:NumbersEnable
 		endif
+		set mouse=a
 	endif
 endfunction
 
