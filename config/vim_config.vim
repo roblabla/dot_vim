@@ -20,7 +20,9 @@ set list
 
 " Behavior
 set wildmode=longest,list		" Bash-style command completion
-set wildignorecase				" Ignore case sensitivity for commands
+if exists("&wildignorecase")
+	set wildignorecase				" Ignore case sensitivity for commands
+endif
 set ignorecase					" Same as above
 set clipboard=unnamed			" * register is OS clipboard
 set autowriteall				" Auto-save before :next, :make, etc...

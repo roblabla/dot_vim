@@ -14,7 +14,9 @@ Plugin 'mattdbridges/bufkill.vim'
 Plugin 'terryma/vim-multiple-cursors' " TODO : Needs configuration
 " Todo, check if EditorConfig core is installed
 Plugin 'editorconfig/editorconfig-vim'
-Plugin 'SirVer/ultisnips'
+if v:version >= 740
+	Plugin 'SirVer/ultisnips'
+endif
 Plugin 'kien/rainbow_parentheses.vim'
 
 " Visual
@@ -22,7 +24,9 @@ Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
 
 " 42
-Plugin 'roblabla/42vim'
+if !filereadable("/usr/share/vim/vim73/plugin/stdheader.vim")
+	Plugin 'roblabla/42vim'
+endif
 
 " Misc
 Plugin 'scrooloose/syntastic' " Todo : Needs configuration
