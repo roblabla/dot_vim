@@ -6,7 +6,7 @@
 "    By: roblabla </var/spool/mail/roblabla>        +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2015/06/12 16:53:14 by roblabla          #+#    #+#              "
-"    Updated: 2015/11/29 11:07:15 by roblabla         ###   ########.fr        "
+"    Updated: 2015/12/04 13:54:32 by roblabla         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -59,13 +59,16 @@ set foldlevelstart=20
 set encoding=utf8
 
 " Language config
-autocmd FileType c set noexpandtab shiftwidth=4 softtabstop=4
-autocmd FileType coffee set expandtab shiftwidth=2 softtabstop=2
-autocmd FileType html set expandtab shiftwidth=2 softtabstop=2
-autocmd FileType hbs set expandtab shiftwidth=2 softtabstop=2
-autocmd FileType javascript set expandtab shiftwidth=2 softtabstop=2
-autocmd FileType jade set expandtab shiftwidth=2 softtabstop=2
-autocmd FileType json set expandtab shiftwidth=2 softtabstop=2
+autocmd FileType c setl noexpandtab shiftwidth=4 softtabstop=4
+autocmd FileType coffee setl expandtab shiftwidth=2 softtabstop=2
+autocmd FileType html setl expandtab shiftwidth=2 softtabstop=2
+autocmd FileType hbs setl expandtab shiftwidth=2 softtabstop=2
+autocmd FileType javascript setl expandtab shiftwidth=2 softtabstop=2
+autocmd FileType jade setl expandtab shiftwidth=2 softtabstop=2
+autocmd FileType json setl expandtab shiftwidth=2 softtabstop=2
+if has("nvim")
+	autocmd TermOpen * setl nolist
+endif
 let asmsyntax="nasm"
 
 " Space Leader !
