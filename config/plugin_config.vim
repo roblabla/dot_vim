@@ -98,3 +98,21 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 " CtrlP
 let g:ctrlp_custom_ignore = 'node_modules'
+
+" Neomake
+let g:neomake_error_sign = {
+            \ 'text': '>>',
+            \ 'texthl': 'ErrorMsg',
+            \ }
+hi MyWarningMsg ctermbg=3 ctermfg=0
+let g:neomake_warning_sign = {
+            \ 'text': '>>',
+            \ 'texthl': 'MyWarningMsg',
+            \ }
+
+" stdheader
+let g:stdheader_user = "roblabla"
+let g:stdheader_mail = "rlambert@student.42.fr"
+
+" multicursors
+let g:multi_cursor_exit_from_insert_mode = 0

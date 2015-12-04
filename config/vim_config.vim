@@ -6,7 +6,7 @@
 "    By: roblabla </var/spool/mail/roblabla>        +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2015/06/12 16:53:14 by roblabla          #+#    #+#              "
-"    Updated: 2015/06/12 16:54:00 by roblabla         ###   ########.fr        "
+"    Updated: 2015/11/29 11:07:15 by roblabla         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -62,6 +62,7 @@ set encoding=utf8
 autocmd FileType c set noexpandtab shiftwidth=4 softtabstop=4
 autocmd FileType coffee set expandtab shiftwidth=2 softtabstop=2
 autocmd FileType html set expandtab shiftwidth=2 softtabstop=2
+autocmd FileType hbs set expandtab shiftwidth=2 softtabstop=2
 autocmd FileType javascript set expandtab shiftwidth=2 softtabstop=2
 autocmd FileType jade set expandtab shiftwidth=2 softtabstop=2
 autocmd FileType json set expandtab shiftwidth=2 softtabstop=2
