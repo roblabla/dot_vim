@@ -6,7 +6,7 @@
 "    By: roblabla </var/spool/mail/roblabla>        +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2015/06/12 16:53:14 by roblabla          #+#    #+#              "
-"    Updated: 2015/12/04 13:54:32 by roblabla         ###   ########.fr        "
+"    Updated: 2017/03/10 15:56:51 by roblabla         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -51,7 +51,7 @@ set sw=4						" Reindent operation fix
 set autoindent					" Smart indentation
 
 " Folding
-set foldmethod=syntax
+set foldmethod=indent
 set foldcolumn=1
 set foldlevelstart=20
 
@@ -59,13 +59,17 @@ set foldlevelstart=20
 set encoding=utf8
 
 " Language config
-autocmd FileType c setl noexpandtab shiftwidth=4 softtabstop=4
-autocmd FileType coffee setl expandtab shiftwidth=2 softtabstop=2
-autocmd FileType html setl expandtab shiftwidth=2 softtabstop=2
-autocmd FileType hbs setl expandtab shiftwidth=2 softtabstop=2
-autocmd FileType javascript setl expandtab shiftwidth=2 softtabstop=2
-autocmd FileType jade setl expandtab shiftwidth=2 softtabstop=2
-autocmd FileType json setl expandtab shiftwidth=2 softtabstop=2
+autocmd FileType c setl noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
+autocmd FileType coffee setl expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType html setl expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType hbs setl expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType javascript setl expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType javascript.jsx setl expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType jade setl expandtab shiftwidth=2 softtabstop=2 tabstop=2
+autocmd FileType json setl expandtab shiftwidth=2 softtabstop=2 tabstop=2
+
+autocmd BufRead,BufNewFile *.caddy set ft=caddyfile
+
 if has("nvim")
 	autocmd TermOpen * setl nolist
 endif

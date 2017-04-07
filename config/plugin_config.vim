@@ -1,11 +1,12 @@
 " Colorscheme
 set background=dark
-colorscheme base16-monokai
+"let base16colorspace=256
+colorscheme molokai
 
 " Airline, the status line of awesome
 " set guifont=Powerline_Consolas:h14:cANSI
-"let g:airline_theme='base16'
-" let g:airline_powerline_fonts = 1
+" let g:airline_theme='base16'
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
@@ -58,10 +59,10 @@ let $PATH .= ':' . $HOME . '/.vim/bundle/merlin'
 let g:slime_target = "tmux"
 
 " Rainbow Parentheses auto-enable
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+"au VimEnter * RainbowParenthesesToggle
+"au Syntax * RainbowParenthesesLoadRound
+"au Syntax * RainbowParenthesesLoadSquare
+"au Syntax * RainbowParenthesesLoadBraces
 
 "Remove black in rainbow parentheses
 let g:rbpt_colorpairs = [
@@ -90,6 +91,20 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
+" Deoplete
+
+let g:deoplete#enable_at_startup = 1
+
+" RLS
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['cargo', 'run', '--release', '--manifest-path=/opt/rls/Cargo.toml'],
+    \ }
+
+" TODO: <Leader> this
+nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
+nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
+nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
+
 " <TAB>: completion, also Ultisnip
 " inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
@@ -116,3 +131,6 @@ let g:stdheader_mail = "rlambert@student.42.fr"
 
 " multicursors
 let g:multi_cursor_exit_from_insert_mode = 0
+
+" HBS MatchTag
+autocmd FileType handlebars runtime! ftplugin/html.vim

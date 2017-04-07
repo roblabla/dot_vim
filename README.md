@@ -10,13 +10,22 @@ quite a lot.
 
 ## Installation
 
+### Neovim
+
 ```shell
-git clone --recursive https://github.com/roblabla/dot_vim $HOME/.vim
-ln -s .vim/vimrc .vimrc
-vim +PluginInstall
+git clone --recursive https://github.com/roblabla/dot_vim $HOME/.config/nvim
+vim +PlugInstall
 ```
 
-I don't have a gvimrc file because I don't use gvim.
+### Vim
+
+```shell
+git clone --recursive https://github.com/roblabla/dot_vim $HOME/.vim
+ln -s .vim/init.vim .vimrc
+vim +PlugInstall
+```
+
+Note: I don't have a gvimrc file because I don't use gvim.
 
 ## Usage
 
@@ -41,7 +50,7 @@ I tried to keep this configuration fairly consistently made. In other words,
 instead of your usual billion-line .vimrc file, I try to organize everything
 simply. Here's a quick explanation, in the order in which they are loaded :
 
-- `config/plugin_list.vim`: Contains the Vundle configuration that lists all
+- `config/plugin_list.vim`: Contains the Plug configuration that lists all
 the plugins used.
 - `config/vim_config.vim`: Contains some sane default vim configuration, along
 with some language specific defaults I tend to need.
