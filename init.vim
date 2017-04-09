@@ -10,7 +10,7 @@
 "                                                                              "
 " **************************************************************************** "
 
-let $VIMPATH=fnamemodify($MYVIMRC, ":p:h")
+let $VIMPATH=fnamemodify(resolve(expand($MYVIMRC)), ":p:h")
 source $VIMPATH/config/plugin_list.vim
 source $VIMPATH/config/vim_config.vim
 source $VIMPATH/config/keybinding.vim
