@@ -6,8 +6,11 @@ Plug 'kien/ctrlp.vim'
 Plug 'mbbill/undotree'
 Plug 'qpkorr/vim-bufkill'
 "Plugin 'terryma/vim-multiple-cursors' " TODO : Needs configuration
-"" Todo, check if EditorConfig core is installed
-Plug 'editorconfig/editorconfig-vim'
+" TODO: Technically speaking, you don't need py3 support if you have the
+" command installed. But I'm too lazy to do the check.
+if has('python3')
+	Plug 'editorconfig/editorconfig-vim'
+endif
 if v:version >= 740
 	Plug 'SirVer/ultisnips'
 endif
@@ -31,7 +34,9 @@ if has('nvim')
 	Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
 	" Optional dep for symbol detection
 	Plug 'junegunn/fzf'
-	Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	if has('python3')
+		Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	endif
 else
 	Plug 'Shougo/neocomplete.vim'
 endif
