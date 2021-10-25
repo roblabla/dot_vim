@@ -17,4 +17,7 @@ source $VIMPATH/config/keybinding.vim
 if has("win32")
 	source $VIMPATH/config/win32.vim
 endif
+if has("nvim")
+	source $VIMPATH/config/autocomplete_config.lua
+endif
 source $VIMPATH/config/plugin_config.vim

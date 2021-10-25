@@ -9,14 +9,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'mbbill/undotree'
 Plug 'qpkorr/vim-bufkill'
 "Plugin 'terryma/vim-multiple-cursors' " TODO : Needs configuration
-" TODO: Technically speaking, you don't need py3 support if you have the
-" command installed. But I'm too lazy to do the check.
-if has('python3')
-	Plug 'editorconfig/editorconfig-vim'
-endif
-if v:version >= 740
-	Plug 'SirVer/ultisnips'
-endif
+Plug 'editorconfig/editorconfig-vim'
+
 " TODO: Find better rainbow parentheses plugin
 "Plugin 'kien/rainbow_parentheses.vim'
 Plug 'airblade/vim-gitgutter'
@@ -33,13 +27,10 @@ endif
 
 " Misc
 if has('nvim')
-	Plug 'benekastah/neomake'
-	Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
-	if has('python3')
-		Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	endif
-else
-	Plug 'Shougo/neocomplete.vim'
+	" Autocomplete
+	Plug 'neovim/nvim-lspconfig'
+	Plug 'hrsh7th/cmp-nvim-lsp'
+	Plug 'hrsh7th/nvim-cmp'
 endif
 
 " Very useful plugin, but makes vim laggy on slow connections. If your vim

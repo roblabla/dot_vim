@@ -77,3 +77,6 @@ let asmsyntax="nasm"
 
 " Space Leader !
 let mapleader = "\<Space>"
+
+" Autocomplete
+set completeopt=menu,menuone,noselect

@@ -39,19 +39,6 @@ endif
 " Open to the right
 let g:undotree_WindowLayout = 3
 
-" Syntastic
-let g:syntastic_c_compiler = 'clang'
-let g:syntastic_c_compiler_options = '-Wall -Wextra -Werror'
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = '-Wall -Wextra -Werror'
-let g:syntastic_coffee_checkers = ['coffee', 'coffeelint']
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_ocaml_checkers = ['merlin']
-
 " Merlin
 let $PATH .= ':' . $HOME . '/.vim/bundle/merlin'
 
@@ -81,38 +68,6 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 
-" Neocomplete
-" let g:acp_enableAtStartup = 0
-" let g:neocomplete#enable_at_startup = 1
-" Smart case
-let g:neocomplete#enable_smart_case = 1
-
-" Minimum 3 letters
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-
-" Deoplete
-
-let g:deoplete#enable_at_startup = 1
-
-" RLS
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['cargo', 'run', '--release', '--manifest-path=/opt/rls/Cargo.toml'],
-    \ }
-
-" TODO: <Leader> this
-nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
-
-" <TAB>: completion, also Ultisnip
-" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-
-" let g:UltiSnipsExpandTrigger = '<f5>'
-
-" CtrlP
-let g:ctrlp_custom_ignore = 'node_modules'
 
 " Neomake
 let g:neomake_error_sign = {
