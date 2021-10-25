@@ -49,6 +49,7 @@ set ts=4						" 4 spaces per tab
 set sw=4						" Reindent operation fix
 " set noexpandtab					" Don't expand tab by default (stupid 42)
 set autoindent					" Smart indentation
+set startofline					" Go to the start of the line with gg and G
 
 " Folding
 set foldmethod=indent
