@@ -2,7 +2,10 @@ call plug#begin($VIMPATH . '/plugged')
 
 " Utilities
 Plug 'scrooloose/nerdtree'
-Plug 'kien/ctrlp.vim'
+" Fuzzy Finder
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
 Plug 'mbbill/undotree'
 Plug 'qpkorr/vim-bufkill'
 "Plugin 'terryma/vim-multiple-cursors' " TODO : Needs configuration
@@ -32,8 +35,6 @@ endif
 if has('nvim')
 	Plug 'benekastah/neomake'
 	Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
-	" Optional dep for symbol detection
-	Plug 'junegunn/fzf'
 	if has('python3')
 		Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 	endif

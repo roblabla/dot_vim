@@ -36,7 +36,10 @@ endfunction
 autocmd VimEnter * call <SID>CreateKeybindings()
 
 function! s:CreateKeybindings()
-	if exists(":CtrlP")
-		nnoremap <Leader>o :CtrlP<CR>
+	if exists(":FZF")
+		nnoremap <Leader>o :FZF<CR>
+	endif
+	if exists(":Rg")
+		nnoremap <Leader>/ :Rg<CR>
 	endif
 endfunction
