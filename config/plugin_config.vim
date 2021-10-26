@@ -89,3 +89,5 @@ let g:multi_cursor_exit_from_insert_mode = 0
 
 " HBS MatchTag
 autocmd FileType handlebars runtime! ftplugin/html.vim
+
+lua require("neogit").setup {}

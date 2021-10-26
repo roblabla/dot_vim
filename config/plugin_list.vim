@@ -65,4 +65,8 @@ Plug 'gregsexton/MatchTag'
 "Plugin 'floobits/floobits-neovim'
 Plug 'jpalardy/vim-slime'
 
+" Because I can't live without magit
+Plug 'nvim-lua/plenary.nvim'
+Plug 'TimUntersberger/neogit'
+
 call plug#end()
