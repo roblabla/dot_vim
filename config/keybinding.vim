@@ -1,8 +1,8 @@
 nnoremap <Leader>v :vsp<CR>
 nnoremap <silent> <Leader>p :call <SID>ToggleCopyPasteMode()<CR>
 " - todo: <Leader this shiz
-nnoremap <silent> <tab> :bn<CR>
-nnoremap <silent> <S-tab> :bp<CR>
+nnoremap <silent> <tab> :call <SID>TabNextNormal()<CR>
+nnoremap <silent> <S-tab> :call <SID>TabPrevNormal()<CR>
 nnoremap <Leader>w :BD<CR>
 nnoremap <Leader>s :w<CR>
 
@@ -41,5 +41,21 @@ function! s:CreateKeybindings()
 	endif
 	if exists(":Rg")
 		nnoremap <Leader>/ :Rg<CR>
+	endif
+endfunction
+
+function! s:TabPrevNormal()
+	if exists("g:NERDTree") && g:NERDTree.ExistsForBuf()
+		" Do nothing
+	else
+		bp
+	endif
+endfunction
+
+function! s:TabNextNormal()
+	if exists("g:NERDTree") && g:NERDTree.ExistsForBuf()
+		" Do nothing
+	else
+		bn
 	endif
 endfunction
