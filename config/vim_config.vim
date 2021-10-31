@@ -6,7 +6,7 @@
 "    By: roblabla </var/spool/mail/roblabla>        +#+  +:+       +#+         "
 "                                                 +#+#+#+#+#+   +#+            "
 "    Created: 2015/06/12 16:53:14 by roblabla          #+#    #+#              "
-"    Updated: 2017/03/10 15:56:51 by roblabla         ###   ########.fr        "
+"    Updated: 2021/10/30 21:22:27 by roblabla         ###   ########.fr        "
 "                                                                              "
 " **************************************************************************** "
 
@@ -60,7 +60,8 @@ set foldlevelstart=20
 set encoding=utf8
 
 " Language config
-autocmd FileType c setl noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
+autocmd FileType c setl expandtab shiftwidth=4 softtabstop=4 tabstop=4
+autocmd FileType cpp setl expandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd FileType coffee setl expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd FileType html setl expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd FileType hbs setl expandtab shiftwidth=2 softtabstop=2 tabstop=2
