@@ -3,16 +3,22 @@ call plug#begin($VIMPATH . '/plugged')
 " Utilities
 Plug 'scrooloose/nerdtree'
 " Fuzzy Finder
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+if has('nvim')
+	Plug 'nvim-lua/plenary.nvim'
+	Plug 'nvim-telescope/telescope.nvim'
+else
+	Plug 'junegunn/fzf'
+	Plug 'junegunn/fzf.vim'
+endif
+Plug 'tpope/vim-fugitive'
 
 Plug 'mbbill/undotree'
 Plug 'qpkorr/vim-bufkill'
-"Plugin 'terryma/vim-multiple-cursors' " TODO : Needs configuration
+Plug 'terryma/vim-multiple-cursors'
 Plug 'editorconfig/editorconfig-vim'
 
 " TODO: Find better rainbow parentheses plugin
-"Plugin 'kien/rainbow_parentheses.vim'
+"Plug 'kien/rainbow_parentheses.vim'
 Plug 'airblade/vim-gitgutter'
 
 "" Visual
@@ -55,8 +61,10 @@ Plug 'rust-lang/rust.vim'
 "Plugin 'othree/html5.vim'
 "Plugin 'peterhoeg/vim-qml'
 "Plugin 'mxw/vim-jsx'
+Plug 'arrufat/vala.vim'
 
-Plug 'gregsexton/MatchTag'
+" Need a way to disable it temporarily...
+"Plug 'gregsexton/MatchTag'
 
 "Plugin 'def-lkb/vimbufsync' " merlin dep
 "Plugin 'the-lambda-church/merlin', { 'rtp': 'vim/merlin' } " TODO : Figure out how to
@@ -68,5 +76,16 @@ Plug 'jpalardy/vim-slime'
 " Because I can't live without magit
 Plug 'nvim-lua/plenary.nvim'
 Plug 'TimUntersberger/neogit'
+
+" Code review gitlab
+let $GL_TOKEN = 'FILL ME'
+Plug 'AGhost-7/critiq.vim'
+
+if has('nvim-0.6')
+	Plug 'nvim-treesitter/nvim-treesitter'
+endif
+
+Plug 'tpope/vim-scriptease'
+Plug 'tpope/vim-abolish'
 
 call plug#end()

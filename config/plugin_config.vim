@@ -90,4 +90,19 @@ let g:multi_cursor_exit_from_insert_mode = 0
 " HBS MatchTag
 autocmd FileType handlebars runtime! ftplugin/html.vim
 
+" Make sure editorconfig doesn't trim whitespace from my diffs >:(
+au FileType diff let b:EditorConfig_disable = 1
+
+" Critiq
+let g:critiq_gitlab_domain = 'FILL ME'
+
 lua require("neogit").setup {}
+
+lua <<LUA
+require('telescope').setup {
+  defaults = {
+    -- avoids https://github.com/nvim-telescope/telescope.nvim/issues/1251
+    prompt_prefix = ''
+  }
+}
+LUA

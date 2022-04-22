@@ -5,6 +5,7 @@ nnoremap <silent> <tab> :call <SID>TabNextNormal()<CR>
 nnoremap <silent> <S-tab> :call <SID>TabPrevNormal()<CR>
 nnoremap <Leader>w :BD<CR>
 nnoremap <Leader>s :w<CR>
+vnoremap <Leader>c "+y
 
 function! s:ToggleCopyPasteMode()
 	if &list
@@ -36,11 +37,19 @@ endfunction
 autocmd VimEnter * call <SID>CreateKeybindings()
 
 function! s:CreateKeybindings()
-	if exists(":FZF")
+	if exists(":Telescope")
+		nnoremap <Leader>o :Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>
+	elseif exists(":FZF")
 		nnoremap <Leader>o :FZF<CR>
 	endif
-	if exists(":FZF")
+	if exists(":Telescope")
+		nnoremap <Leader>/ :Telescope live_grep vimgrep_arguments=rg,--color=never,--no-heading,--with-filename,--line-number,--column,--smart-case,--ignore,--hidden<CR>
+	elseif exists(":FZF")
 		nnoremap <Leader>/ :call RipgrepFzf("", 0)<CR>
+	endif
+
+	if exists(":Telescope")
+		nnoremap <Leader>ca :Telescope lsp_code_actions<CR>
 	endif
 endfunction
 
@@ -61,7 +70,7 @@ function! s:TabNextNormal()
 endfunction
 
 function! RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let command_fmt = 'rg -. --column --line-number --no-heading --color=always --smart-case -L -- %s || true'
   let initial_command = printf(command_fmt, shellescape(a:query))
   let reload_command = printf(command_fmt, '{q}')
   let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
