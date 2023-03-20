@@ -1,5 +1,4 @@
-vim.keymap.set('n', '<Leader>v', ':vsp<CR>', { silent = true })
-vim.keymap.set('n', '<Leader>p', function()
+vim.keymap.set('n', '<Leader>v', ':vsp<CR>', { silent = true }) vim.keymap.set('n', '<Leader>p', function()
     if vim.o.list then
         vim.o.list = false
         vim.o.paste = true
@@ -25,3 +24,4 @@ vim.keymap.set('n', '<Leader>/', function()
 end)
 vim.keymap.set('n', '<Tab>', ':bn<CR>', { silent = true })
 vim.keymap.set('n', '<S-Tab>', ':bp<CR>', { silent = true })
+vim.keymap.set('n', '<Leader>x', ':bp|bd #<CR>', { silent = true })

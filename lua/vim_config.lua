@@ -17,6 +17,7 @@ vim.opt.clipboard = 'unnamed'
 vim.opt.autowriteall = true
 vim.opt.swapfile = false
 vim.opt.mouse = "a"
+vim.opt.undofile = true
 
 vim.opt.sts = 4
 vim.opt.ts = 4
@@ -40,9 +41,18 @@ vim.api.nvim_create_autocmd({"FileType"}, {
   pattern = {"coffee", "html", "hbs", "javascript", "javascript.jsx", "jade", "json", "lua"},
   command = "setl expandtab shiftwidth=2 softtabstop=2 tabstop=2"
 })
+vim.api.nvim_create_autocmd({"FileType"}, {
+  pattern = {"gitcommit"},
+  callback = function() vim.opt_local.cc = '72' end,
+})
+
+vim.api.nvim_create_augroup("packer_user_config", {
+  clear = true
+})
+vim.api.nvim_create_autocmd("BufWritePost", {
+  group = "packer_user_config",
+  pattern = "plugin_list.lua",
+  command = "source <afile> | PackerCompile"
+})
 
 vim.g.mapleader = " "
-
--- Disable filetype.vim
-vim.g.did_load_filetypes = 0
-vim.g.do_filetype_lua = 1
